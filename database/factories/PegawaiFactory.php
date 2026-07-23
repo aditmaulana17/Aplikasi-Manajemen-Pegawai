@@ -26,7 +26,7 @@ class PegawaiFactory extends Factory
             'tanggal_lahir'=> $this->faker->date(),
             'tempat_lahir'=> $this->faker->city(),
             'jenis_kelamin'=> $this->faker->randomElement(['laki-laki','perempuan']),
-           
+            'foto' => $this->faker->imageUrl(),
         ];
     }
 }

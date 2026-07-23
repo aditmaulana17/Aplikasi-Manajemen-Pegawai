@@ -34,7 +34,7 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $item->nama_pegawai }}</td>
                         <td>{{ $item->bagian?->nama_bagian }}</td>
-                        <td>{{ $item->user?->email }}</td>
+                        <td>{{ $item->email }}</td>
                         <td>{{ $item->nik }}</td>
                         <td>{{ $item->jenis_kelamin }}</td>
                         <td>{{ $item->umur }}</td>

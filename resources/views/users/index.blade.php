@@ -10,7 +10,6 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Email</th>
                         <th>Role</th>
                         <th>Opsi</th>
                     </tr>
@@ -20,7 +19,6 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
                             <td>{{ $user->role?->role_name }}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#roleModal{{ $user->id }}">

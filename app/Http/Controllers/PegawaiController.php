@@ -81,8 +81,6 @@ class PegawaiController extends Controller
     'password' => Hash::make('password'),
     'pegawai_id' => $newData->id,
     ]);
-    $newData->user_id = $user->id;
-    $newData->save();
 
     Alert::success('Berhasil', 'Data berhasil ditambahkan.');
        return redirect()->route('pegawai.index');

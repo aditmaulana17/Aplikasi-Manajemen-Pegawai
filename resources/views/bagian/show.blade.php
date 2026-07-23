@@ -10,7 +10,6 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Pegawai</th>
-                        <th>Email</th>
                         <th>Jenis Kelamin</th>
                     </tr>
                 </thead>
@@ -19,7 +18,6 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $item->nama_pegawai }}</td>
-                            <td>{{ $item->user->email }}</td>
                             <td>{{ $item->jenis_kelamin }}</td>
                         </tr>
                     @endforeach
