@@ -13,6 +13,9 @@
                         {{ $user->role->role_name ?? 'Pegawai' }}
                     </span>
                 </div>
+                 <a href="{{ route('home') }}" class="btn btn-primary">
+                    Kembali
+                </a>
             </div>
         </div>
 
