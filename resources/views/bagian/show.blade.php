@@ -1,8 +1,12 @@
 @extends('layouts.mantis')
+
 @section('content')
     <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Data Bagian {{ $bagian->nama_bagian }}</h4>
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="card-title mb-0">Data Bagian {{ $bagian->nama_bagian }}</h4>
+            <a href="{{ route('bagian.index') }}" class="btn btn-secondary btn-sm">
+                <i class="bi bi-arrow-left me-1"></i> Kembali
+            </a>
         </div>
         <div class="card-body">
             <table class="table">

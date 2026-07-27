@@ -146,18 +146,26 @@ class PegawaiController extends Controller
        return redirect()->route('pegawai.index');
        }
 
-       public function destroy(String $id)
-       {
-        // Pegawai::destroy($id);
-        $pegawai = Pegawai::find($id);
+public function destroy(String $id)
+{
+    $pegawai = Pegawai::findOrFail($id);
 
-        if ($pegawai->foto != null){
-             Storage::disk('public')->delete('foto_pegawai/' . $pegawai->foto);
-        }
+    // 1. Putus relasi ke tabel users terlebih dahulu
+    User::where('pegawai_id', $pegawai->id)->update(['pegawai_id' => null]);
+    
+    // Atau jika akun user harus ikut terhapus ketika pegawai dihapus:
+    // User::where('pegawai_id', $pegawai->id)->delete();
 
-        $pegawai->delete();
-          Alert::success('Berhasil', 'Data berhasil dihapus.');
-        return redirect()->route('pegawai.index');
-       }
+    // 2. Hapus foto jika ada
+    if ($pegawai->foto) {
+        Storage::disk('public')->delete('foto_pegawai/' . $pegawai->foto);
+    }
+
+    // 3. Hapus data pegawai
+    $pegawai->delete();
+
+    Alert::success('Berhasil', 'Data berhasil dihapus.');
+    return redirect()->route('pegawai.index');
+}
 }
 

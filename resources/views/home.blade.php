@@ -30,7 +30,7 @@
                 <div class="card-body p-4 d-flex align-items-center justify-content-between">
                     <div>
                         <h6 class="text-muted text-uppercase small fw-bold mb-1">Total Pegawai</h6>
-                        <span class="h3 fw-bold mb-0">5</span> <!-- Ganti dengan data dinamis jika ada -->
+                        <span class="h3 fw-bold mb-0">15</span> <!-- Ganti dengan data dinamis jika ada -->
                     </div>
                     <div class="bg-info bg-opacity-10 text-info p-3 rounded-3">
                         <i class="ti ti-users fs-3"></i>
@@ -60,7 +60,7 @@
                 <div class="card-body p-4 d-flex align-items-center justify-content-between">
                     <div>
                         <h6 class="text-muted text-uppercase small fw-bold mb-1">Pengguna Aktif</h6>
-                        <span class="h3 fw-bold mb-0">5</span> <!-- Ganti dengan data dinamis jika ada -->
+                        <span class="h3 fw-bold mb-0">15</span> <!-- Ganti dengan data dinamis jika ada -->
                     </div>
                     <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3">
                         <i class="ti ti-user-check fs-3"></i>

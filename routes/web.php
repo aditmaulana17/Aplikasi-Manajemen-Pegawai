@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function () {
     // - Data Pegawai
     // =====================================
 
-    Route::middleware('role:2,1')->group(function () {
+    Route::middleware('role:2')->group(function () {
 
         Route::resource('users', UserController::class);
 
@@ -64,8 +64,9 @@ Route::middleware('auth')->group(function () {
             'user-update-role',
             [UserController::class, 'updateRole']
         )->name('user.update-role');
+    });
 
-
+        Route::middleware('role:2,1')->group(function () {
         Route::resource('bagian', BagianController::class);
 
     });

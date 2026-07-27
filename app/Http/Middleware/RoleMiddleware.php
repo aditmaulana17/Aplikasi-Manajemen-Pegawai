@@ -5,16 +5,21 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
 
 class RoleMiddleware
 {
-    public function handle(Request $request, Closure $next, ...$roles): Response
+    public function handle(
+    Request $request,
+    Closure $next,
+    string ...$roles
+): Response
     {
-        if (!auth()->check()) {
-            return redirect('/login');
-        }
+        if (!Auth::check()) {
+    return redirect('/login');
+}
 
-        $userRole = (int) auth()->user()->role_id;
+$userRole = (int) Auth::user()->role_id;
 
         $allowedRoles = array_map('intval', $roles);
 
