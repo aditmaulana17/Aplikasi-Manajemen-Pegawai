@@ -4,7 +4,7 @@
         <div class="d-flex justify-content-between mb-3">
     <h3>Data Bagian</h3>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahBagian">
-        Tambah Data
+        Tambah Bagian
     </button>
 </div>
         <div class="card-body">
