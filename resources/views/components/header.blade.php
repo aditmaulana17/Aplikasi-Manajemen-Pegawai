@@ -23,7 +23,7 @@
         aria-haspopup="false"
         aria-expanded="false"
       >
-        {{-- <i class="ti ti-search"></i>
+        <i class="ti ti-search"></i>
       </a>
       <div class="dropdown-menu pc-h-dropdown drp-search">
         <form class="px-3">
@@ -40,7 +40,7 @@
         <input type="search" class="form-control" placeholder="Search here. . .">
       </form>
     </li>
-  </ul> --}}
+  </ul>
 </div>
 <!-- [Mobile Media Block end] -->
 <div class="ms-auto">
