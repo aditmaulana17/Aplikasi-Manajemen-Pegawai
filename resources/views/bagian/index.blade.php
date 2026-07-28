@@ -22,8 +22,8 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $bagian->nama_bagian }}</td>
                             <td>
-                                <a href="{{ route('bagian.show', $bagian->id) }}">Detail</a>
-                                <a href="{{ route('bagian.destroy', $bagian->id) }}" class="text-danger" data-confirm-delete="true">Hapus</a>
+                                <a href="{{ route('bagian.show', $bagian->id) }}"class="btn btn-primary">Detail</a>
+                                <a href="{{ route('bagian.destroy', $bagian->id) }}"class="btn btn-danger" data-confirm-delete="true">Hapus</a>
                             </td>
                             <td>
                                 <div class="modal fade" id="modalTambahBagian" tabindex="-1" aria-labelledby="modalTambahBagianLabel" aria-hidden="true">
